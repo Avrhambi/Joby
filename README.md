@@ -2,14 +2,6 @@
 
 A high-performance FastAPI server that handles user authentication, job notification preferences, and scheduled email alerts for the Joby job search application.
 
-## Why FastAPI?
-
-✅ **Same ecosystem as your jobs server** (Python)  
-✅ **Faster performance** - Async/await native, faster JSON serialization  
-✅ **Better type safety** - Pydantic validation built-in  
-✅ **Easier deployment** - One Python environment for both servers  
-✅ **More powerful scheduling** - APScheduler vs node-cron  
-✅ **Auto-generated API docs** - OpenAPI/Swagger at `/docs`
 
 ## Features
 
