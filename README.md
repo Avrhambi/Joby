@@ -1,6 +1,6 @@
-# Joby — jobs-engine
+# Joby (jobs-engine)
 
-Lightweight job-scraping API and sanity tests. This repository provides a small FastAPI service that uses the `jobspy` scraper to collect job listings (Indeed / LinkedIn), a sample CSV of scraped jobs (`jobs.csv`) and a few convenience test scripts.
+This repository provides a small FastAPI service that uses the `jobspy` scraper to collect job listings (Indeed / LinkedIn), a sample CSV of scraped jobs (`jobs.csv`) and a few convenience test scripts.
 
 ## What this project does
 
