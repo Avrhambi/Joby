@@ -1,7 +1,6 @@
-# Joby Notification Server (FastAPI)
+# Joby Notification Server 
 
 A high-performance FastAPI server that handles user authentication, job notification preferences, and scheduled email alerts for the Joby job search application.
-
 
 ## Features
 
@@ -251,34 +250,6 @@ Open browser: http://localhost:8001/docs
 
 Try out endpoints interactively!
 
-## Performance Advantages
-
-### FastAPI vs Node.js
-
-```
-Benchmark (1000 requests):
-- Node.js/Express:     ~450 req/sec
-- FastAPI:            ~800 req/sec
-
-Database queries:
-- Node.js (pg):       Good
-- FastAPI (psycopg2): Excellent
-
-Async operations:
-- Node.js:            Native
-- FastAPI:            Native + faster
-
-Memory usage:
-- Node.js:            ~120 MB
-- FastAPI:            ~80 MB
-```
-
-### Why it's faster:
-
-- ✅ Python's async/await is more efficient for I/O
-- ✅ Pydantic validation is compiled (Rust-based)
-- ✅ Better connection pooling with psycopg2
-- ✅ Uvicorn ASGI server is highly optimized
 
 ## Troubleshooting
 
@@ -352,120 +323,6 @@ pip install -r requirements.txt --upgrade
 python --version
 ```
 
-## Production Deployment
-
-### Using Gunicorn (Recommended)
-
-```bash
-pip install gunicorn
-
-gunicorn server:app \
-  --workers 4 \
-  --worker-class uvicorn.workers.UvicornWorker \
-  --bind 0.0.0.0:8001
-```
-
-### Using Docker
-
-```dockerfile
-FROM python:3.10-slim
-
-WORKDIR /app
-
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY . .
-
-CMD ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8001"]
-```
-
-```bash
-docker build -t joby-server .
-docker run -p 8001:8001 --env-file .env joby-server
-```
-
-### Using Systemd (Linux)
-
-Create `/etc/systemd/system/joby.service`:
-
-```ini
-[Unit]
-Description=Joby Notification Server
-After=network.target postgresql.service
-
-[Service]
-User=yourusername
-WorkingDirectory=/path/to/joby-server
-Environment="PATH=/path/to/venv/bin"
-EnvironmentFile=/path/to/.env
-ExecStart=/path/to/venv/bin/uvicorn server:app --host 0.0.0.0 --port 8001
-Restart=always
-
-[Install]
-WantedBy=multi-user.target
-```
-
-```bash
-sudo systemctl daemon-reload
-sudo systemctl enable joby
-sudo systemctl start joby
-sudo systemctl status joby
-```
-
-## Security Checklist
-
-- [ ] Change `JWT_SECRET` to strong random string (use `openssl rand -hex 32`)
-- [ ] Never commit `.env` file (add to .gitignore)
-- [ ] Use HTTPS in production (nginx/caddy reverse proxy)
-- [ ] Configure CORS properly (don't use `allow_origins=["*"]`)
-- [ ] Set up database backups
-- [ ] Use environment-specific configs
-- [ ] Enable rate limiting (FastAPI-Limiter)
-- [ ] Set up logging (Loguru)
-- [ ] Monitor server health (Prometheus/Grafana)
-- [ ] Use secrets management (AWS Secrets Manager, etc.)
-
-## Project Structure
-
-```
-joby-notification-server/
-├── server.py              # Main FastAPI application
-├── requirements.txt       # Python dependencies
-├── .env                   # Environment variables (not in git)
-├── .env.example          # Example environment file
-├── .gitignore            # Git ignore rules
-├── init.sql              # Optional DB initialization
-├── README.md             # This file
-└── QUICKSTART.md         # Quick start guide
-```
-
-## Advantages Over Node.js Version
-
-| Feature | Node.js | FastAPI | Winner |
-|---------|---------|---------|--------|
-| Same stack as jobs server | ❌ | ✅ | FastAPI |
-| Performance | Good | Better | FastAPI |
-| Type safety | Needs TS | Built-in | FastAPI |
-| API docs | Manual | Auto | FastAPI |
-| Async operations | Native | Native + Faster | FastAPI |
-| Scheduler | node-cron | APScheduler | FastAPI |
-| Database | pg | psycopg2 | FastAPI |
-| Memory usage | Higher | Lower | FastAPI |
-| Deployment | Separate | Together | FastAPI |
-
-## Database Backup
-
-```bash
-# Backup
-pg_dump -U postgres joby > backup_$(date +%Y%m%d).sql
-
-# Restore
-psql -U postgres joby < backup_20240101.sql
-
-# Automated daily backup (crontab)
-0 2 * * * pg_dump -U postgres joby > /backups/joby_$(date +\%Y\%m\%d).sql
-```
 
 ## Monitoring
 
@@ -492,13 +349,6 @@ The scheduler logs to stdout:
 - Success/failure status
 - Error messages
 
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
 
 ## License
 
@@ -512,12 +362,4 @@ For issues or questions:
 - Check server logs
 - Ensure jobs server is running
 
-## Changelog
 
-### v1.0.0
-- Initial FastAPI implementation
-- JWT authentication
-- PostgreSQL with raw SQL
-- APScheduler for cron jobs
-- Email notifications
-- Auto-generated API docs
