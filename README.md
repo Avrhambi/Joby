@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Joby (Frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A small React single-page application for creating and managing personalized job notifications.
 
-## Available Scripts
+This frontend was scaffolded with Create React App and uses React Router for navigation. The app expects a backend API (by default at http://localhost:8001) for authentication, user profile, and notification persistence.
 
-In the project directory, you can run:
+## Features
+- Sign up / login
+- Create, edit and delete job notification rules
+- Profile editing (name, email) and password change
+- Client-side forms with validation and backend error handling
 
-### `npm start`
+## Prerequisites
+- Node.js (>= 14)
+- npm or yarn
+- A backend server running (default expected at http://localhost:8001). See "API" section for expected endpoints.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Quick start
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Install dependencies
 
-### `npm test`
+```bash
+npm install
+# or: yarn
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Run development server
 
-### `npm run build`
+```bash
+npm start
+# or: yarn start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Build for production
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm run build
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Environment
+- The frontend will use the `REACT_APP_API_URL` env variable if set. By default it calls `http://localhost:8001`.
 
-### `npm run eject`
+Example (Windows PowerShell):
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```powershell
+$env:REACT_APP_API_URL = 'http://localhost:8001'; npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Expected backend API (assumptions)
+The frontend expects these endpoints (adjust `src/utils/mockApi.js` if your API differs):
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- POST /signup -> { token, user }
+- POST /login -> { token, user }
+- GET /user/me -> { user }
+- PUT /user/me -> updated user
+- POST /user/me/password -> { success }
+- GET /notifications -> [ ...notifications ]
+- POST /notifications -> created notification
+- PUT /notifications/:id -> updated notification
+- DELETE /notifications/:id -> 204 / { success }
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+All authenticated requests must include `Authorization: Bearer <token>` header.
 
-## Learn More
+## Project structure (important files)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `src/App.js` — top-level routing and app state (token, user, notifications)
+- `src/index.js` — mounts app and router
+- `src/screens/` — page-level components (Home, AuthPage, NotificationPage, UserEdit)
+- `src/components/` — reusable UI components (Header, AuthForm, NotificationForm, NotificationList, EmptyState)
+- `src/utils/mockApi.js` — small fetch wrapper that talks to the backend
+- `src/constants.js` — shared constant lists used in forms
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Styling
+The app uses Tailwind-like utility classes. Colors/palette are set inline on components; if you want a global theme, extract class names to a central theme file.
 
-### Code Splitting
+## Notes & TODOs
+- Consider standardizing filenames (`home.js` → `Home.js`) to avoid case-sensitivity issues across platforms.
+- Add centralized toast/notification system for UX consistency.
+- Confirm backend contract and response shapes; adjust `src/utils/mockApi.js` accordingly.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
