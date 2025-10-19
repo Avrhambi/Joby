@@ -1,6 +1,6 @@
 # Joby (Frontend)
 
-A small React single-page application for creating and managing personalized job notifications.
+A React application for creating and managing personalized job notifications.
 
 This frontend was scaffolded with Create React App and uses React Router for navigation. The app expects a backend API (by default at http://localhost:8001) for authentication, user profile, and notification persistence.
 
@@ -61,20 +61,8 @@ The frontend expects these endpoints (adjust `src/utils/mockApi.js` if your API 
 
 All authenticated requests must include `Authorization: Bearer <token>` header.
 
-## Project structure (important files)
-
-- `src/App.js` — top-level routing and app state (token, user, notifications)
-- `src/index.js` — mounts app and router
-- `src/screens/` — page-level components (Home, AuthPage, NotificationPage, UserEdit)
-- `src/components/` — reusable UI components (Header, AuthForm, NotificationForm, NotificationList, EmptyState)
-- `src/utils/mockApi.js` — small fetch wrapper that talks to the backend
-- `src/constants.js` — shared constant lists used in forms
 
 ## Styling
 The app uses Tailwind-like utility classes. Colors/palette are set inline on components; if you want a global theme, extract class names to a central theme file.
 
-## Notes & TODOs
-- Consider standardizing filenames (`home.js` → `Home.js`) to avoid case-sensitivity issues across platforms.
-- Add centralized toast/notification system for UX consistency.
-- Confirm backend contract and response shapes; adjust `src/utils/mockApi.js` accordingly.
 
