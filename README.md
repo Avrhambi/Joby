@@ -131,4 +131,3 @@ Note: some scripts call `jobspy` and may require a working proxy or site-specifi
 - For encoding issues when reading/writing `jobs.csv`, use UTF-8 and the Python `csv` module with appropriate quoting/escape settings (the sample CSV in this repo was exported with quoting and escaped characters).
 
 
-
