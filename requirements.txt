@@ -1,0 +1,11 @@
+fastapi==0.104.1                # Main web framework
+uvicorn[standard]==0.24.0       # ASGI server to run FastAPI
+pydantic==2.5.0                 # Data validation and settings
+pydantic[email]==2.5.0          # Email validation for Pydantic
+psycopg2-binary==2.9.9          # PostgreSQL database driver
+bcrypt==4.1.1                   # Password hashing
+PyJWT==2.8.0                    # JWT token creation/verification
+APScheduler==3.10.4             # Job scheduling (cron jobs)
+requests==2.31.0                # HTTP client (to call jobs server)
+python-multipart==0.0.6         # Form data parsing
+python-dotenv==1.0.0            # Load .env files
