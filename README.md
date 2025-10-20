@@ -1,4 +1,4 @@
-# Joby Notification Server 
+# Joby (Bacakend Server) 
 
 A high-performance FastAPI server that handles user authentication, job notification preferences, and scheduled email alerts for the Joby job search application.
 
