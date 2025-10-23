@@ -94,29 +94,29 @@ npm run build
 $env:REACT_APP_API_URL = 'http://localhost:8001'; npm start
 ```
 
-### Environment Variables
+#### Environment Variables
 Variable	Description	Default
 REACT_APP_API_URL	Backend API URL	http://localhost:8001
 ###  Backend Endpoints
-#### Method	Endpoint	Description
+- Method	Endpoint	Description
 
-`POST`	/signup	Register new user
+ `POST`	/signup	Register new user
 
-`POST`	/login	Authenticate user
+ `POST`	/login	Authenticate user
 
-`GET`	/user/me	Retrieve user details
+ `GET`	/user/me	Retrieve user details
 
-`PUT`	/user/me	Update user profile
+ `PUT`	/user/me	Update user profile
 
-`POST`	/user/me/password	Change password
+ `POST`	/user/me/password	Change password
 
-`GET`	/notifications	Fetch all job notifications
+ `GET`	/notifications	Fetch all job notifications
 
-`POST`	/notifications	Create a new notification rule
+ `POST`	/notifications	Create a new notification rule
 
-`PUT`	/notifications/:id	Update a notification rule
+ `PUT`	/notifications/:id	Update a notification rule
 
-`DELETE`	/notifications/:id	Delete a notification rule
+ `DELETE`	/notifications/:id	Delete a notification rule
 
 All authenticated requests must include:
 ```bash
