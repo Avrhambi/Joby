@@ -17,26 +17,26 @@ The platform enables users to:
 
 ## Project Structure
 
--**Frontend**    Web client for user authentication, profile management, and job notifications      
+- **Frontend**    Web client for user authentication, profile management, and job notifications      
 
--**Backend**     REST API for authentication, job notification CRUD, and email scheduling   
+- **Backend**     REST API for authentication, job notification CRUD, and email scheduling   
 
--**Jobs Engine** Microservice for scraping and aggregating job listings                  
+- **Jobs Engine** Microservice for scraping and aggregating job listings                  
 
 ### Main Ports:
 
- **Frontend** 3000
+ - **Frontend** 3000
 
- **Backend** 8001
+ - **Backend** 8001
 
- **Jobs Engine** 8002
+ - **Jobs Engine** 8002
 
 ### Tech Stack
-**Frontend**: JavaScript, React, Tailwind CSS
+- **Frontend**: JavaScript, React, Tailwind CSS
 
-**Backend**: Python, FastAPI, PostgreSQL
+- **Backend**: Python, FastAPI, PostgreSQL
 
-**Jobs Engine**: Python, FastAPI, JobsSpy
+- **Jobs Engine**: Python, FastAPI, JobsSpy
 
 # Joby Frontend
 
