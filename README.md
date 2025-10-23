@@ -52,7 +52,7 @@ The app interacts with the backend API for authentication, data persistence, and
 
 🌐 Configurable API URL: Uses environment variable REACT_APP_API_URL for backend connection.
 
-## ⚙️ Prerequisites
+### ⚙️ Prerequisites
 
 Node.js (>= 14)
 
@@ -60,7 +60,7 @@ npm or yarn
 
 Backend server running at http://localhost:8001 (by default)
 
-🚀 Quick Start
+##  Quick Start
 
 1️⃣ Install dependencies:
 ```bash
@@ -70,7 +70,6 @@ npm install
 ```bash
 yarn
 ```
-
 
  2️⃣ Run development server:
 
@@ -87,13 +86,14 @@ yarn start
 npm run build
 ```
 
-
 4️⃣ Set environment variable (optional):
 
 Windows PowerShell
+```bash
 $env:REACT_APP_API_URL = 'http://localhost:8001'; npm start
+```
 
-🌐 Environment Variables
+### 🌐 Environment Variables
 Variable	Description	Default
 REACT_APP_API_URL	Backend API URL	http://localhost:8001
 🔗 Expected Backend Endpoints
@@ -123,16 +123,14 @@ For a consistent global theme, you can extract class names into a shared theme f
 
 You can test the frontend locally after running the backend:
 
-## Run backend on port 8001
+### Run backend on port 8001
 ```bash
 uvicorn main:app --reload --port 8001
 ```
-
-## Run frontend on port 3000
+### Run frontend on port 3000
 ```bash
 npm start
 ```
-
 
 Once both are running, open http://localhost:3000
  in your browser.
