@@ -17,11 +17,11 @@ The platform enables users to:
 
 ## Project Structure
 
- **Frontend**    Web client for user authentication, profile management, and job notifications      
+-**Frontend**    Web client for user authentication, profile management, and job notifications      
 
- **Backend**     REST API for authentication, job notification CRUD, and email scheduling   
+-**Backend**     REST API for authentication, job notification CRUD, and email scheduling   
 
- **Jobs Engine** Microservice for scraping and aggregating job listings                  
+-**Jobs Engine** Microservice for scraping and aggregating job listings                  
 
 ### Main Ports:
 
