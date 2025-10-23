@@ -62,7 +62,7 @@ Backend server running at http://localhost:8001 (by default)
 
 🚀 Quick Start
 
-## 1️⃣ Install dependencies:
+1️⃣ Install dependencies:
 ```bash
 npm install
 ```
@@ -72,25 +72,25 @@ yarn
 ```
 
 
-## 2️⃣ Run development server:
+ 2️⃣ Run development server:
 
 ```bash  
 npm start
 ```
-## or
+### or
 ```bash
 yarn start
 ```
 
-## 3️⃣ Build for production:
+3️⃣ Build for production:
 ```bash
 npm run build
 ```
 
 
-## 4️⃣ Set environment variable (optional):
+4️⃣ Set environment variable (optional):
 
-## Windows PowerShell
+Windows PowerShell
 $env:REACT_APP_API_URL = 'http://localhost:8001'; npm start
 
 🌐 Environment Variables
