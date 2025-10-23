@@ -30,7 +30,7 @@ Backend: 8001
 
 Jobs Engine: 8002
 
-🖥️ Joby Frontend
+# 🖥️ Joby Frontend
 
 A React-based web application that serves as the user interface for the Joby platform.
 It enables users to sign up, log in, manage their profiles, and create job notification rules.
@@ -52,7 +52,7 @@ The app interacts with the backend API for authentication, data persistence, and
 
 🌐 Configurable API URL: Uses environment variable REACT_APP_API_URL for backend connection.
 
-⚙️ Prerequisites
+## ⚙️ Prerequisites
 
 Node.js (>= 14)
 
@@ -62,17 +62,17 @@ Backend server running at http://localhost:8001 (by default)
 
 🚀 Quick Start
 
-1️⃣ Install dependencies:
+## 1️⃣ Install dependencies:
 ```bash
 npm install
 ```
-## or
+### or
 ```bash
 yarn
 ```
 
 
-2️⃣ Run development server:
+## 2️⃣ Run development server:
 
 ```bash  
 npm start
@@ -82,15 +82,15 @@ npm start
 yarn start
 ```
 
-3️⃣ Build for production:
+## 3️⃣ Build for production:
 ```bash
 npm run build
 ```
 
 
-4️⃣ Set environment variable (optional):
+## 4️⃣ Set environment variable (optional):
 
-# Windows PowerShell
+## Windows PowerShell
 $env:REACT_APP_API_URL = 'http://localhost:8001'; npm start
 
 🌐 Environment Variables
