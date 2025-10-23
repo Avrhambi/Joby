@@ -36,7 +36,7 @@ A React-based web application that serves as the user interface for the Joby pla
 It enables users to sign up, log in, manage their profiles, and create job notification rules.
 The app interacts with the backend API for authentication, data persistence, and notification management.
 
-✨ Features
+## Features:
 
 🔐 Authentication: Sign up and login via JWT tokens.
 
