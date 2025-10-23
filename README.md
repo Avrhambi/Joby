@@ -98,7 +98,7 @@ $env:REACT_APP_API_URL = 'http://localhost:8001'; npm start
 Variable	Description	Default
 REACT_APP_API_URL	Backend API URL	http://localhost:8001
 
-###  Backend Endpoints
+####  Backend Endpoints
 
 `POST`	/signup	Register new user
 
