@@ -25,9 +25,9 @@ The platform enables users to:
 
 ### Main Ports:
 
-- Frontend: 3000
-- Backend: 8001
-- Jobs Engine: 8002
+**Frontend** 3000
+**Backend** 8001
+**Jobs Engine** 8002
 
 ### Tech Stack
 - Frontend: JavaScript, React, Tailwind CSS
