@@ -1,67 +1,132 @@
-# Joby (Frontend)
+🧠 Joby – Personalized Job Notification Platform
+🌍 Overview
 
-A React application for creating and managing personalized job notifications.
-This frontend was scaffolded with Create React App and uses React Router for navigation. The app expects a backend API (by default at http://localhost:8001) for authentication, user profile, and notification persistence.
+Joby is a full-stack job notification platform that allows users to create, manage, and receive personalized job alerts based on their preferences.
+It consists of three coordinated components:
 
-## Features
-- Sign up / login
-- Create, edit and delete job notification rules
-- Profile editing (name, email) and password change
-- Client-side forms with validation and backend error handling
+Frontend (React) – The user-facing interface for registration, login, and notification management.
 
-## Prerequisites
-- Node.js (>= 14)
-- npm or yarn
-- A backend server running (default expected at http://localhost:8001). See "API" section for expected endpoints.
+Backend (FastAPI) – The main API that handles authentication, user data, and automated email notifications.
 
-## Quick start
+Jobs Engine (FastAPI) – A microservice that scrapes and aggregates job listings from Indeed and LinkedIn.
 
-1. Install dependencies
+The platform enables users to:
 
-```bash
+Register and log in securely using JWT-based authentication.
+
+Define job search rules (e.g., job title, location, frequency).
+
+Automatically receive job listings by email daily, weekly, or monthly.
+
+View and update personal information and notification preferences via an intuitive React interface.
+
+
+Main Ports:
+
+Frontend: 3000
+
+Backend: 8001
+
+Jobs Engine: 8002
+
+🖥️ Joby Frontend
+
+A React-based web application that serves as the user interface for the Joby platform.
+It enables users to sign up, log in, manage their profiles, and create job notification rules.
+The app interacts with the backend API for authentication, data persistence, and notification management.
+
+✨ Features
+
+🔐 Authentication: Sign up and login via JWT tokens.
+
+⚙️ Profile Management: Edit name, email, and password.
+
+📬 Job Notifications: Create, edit, and delete job notification rules.
+
+🧭 Routing: Implemented using React Router for seamless navigation.
+
+✅ Validation: Client-side form validation with backend error handling.
+
+🎨 Styling: Tailwind-style utility classes for consistent UI design.
+
+🌐 Configurable API URL: Uses environment variable REACT_APP_API_URL for backend connection.
+
+⚙️ Prerequisites
+
+Node.js (>= 14)
+
+npm or yarn
+
+Backend server running at http://localhost:8001 (by default)
+
+🚀 Quick Start
+
+1️⃣ Install dependencies:
+
 npm install
-# or: yarn
-```
+# or
+yarn
 
-2. Run development server
 
-```bash
+2️⃣ Run development server:
+
 npm start
-# or: yarn start
-```
+# or
+yarn start
 
-3. Build for production
 
-```bash
+3️⃣ Build for production:
+
 npm run build
-```
 
-## Environment
-- The frontend will use the `REACT_APP_API_URL` env variable if set. By default it calls `http://localhost:8001`.
 
-Example (Windows PowerShell):
+4️⃣ Set environment variable (optional):
 
-```powershell
+# Windows PowerShell
 $env:REACT_APP_API_URL = 'http://localhost:8001'; npm start
-```
 
-## Expected backend API 
-The frontend expects these endpoints (adjust `src/utils/mockApi.js` if your API differs):
+🌐 Environment Variables
+Variable	Description	Default
+REACT_APP_API_URL	Backend API URL	http://localhost:8001
+🔗 Expected Backend Endpoints
+Method	Endpoint	Description
+POST	/signup	Register new user
+POST	/login	Authenticate user
+GET	/user/me	Retrieve user details
+PUT	/user/me	Update user profile
+POST	/user/me/password	Change password
+GET	/notifications	Fetch all job notifications
+POST	/notifications	Create a new notification rule
+PUT	/notifications/:id	Update a notification rule
+DELETE	/notifications/:id	Delete a notification rule
 
-- POST /signup -> { token, user }
-- POST /login -> { token, user }
-- GET /user/me -> { user }
-- PUT /user/me -> updated user
-- POST /user/me/password -> { success }
-- GET /notifications -> [ ...notifications ]
-- POST /notifications -> created notification
-- PUT /notifications/:id -> updated notification
-- DELETE /notifications/:id -> 204 / { success }
+All authenticated requests must include:
 
-All authenticated requests must include `Authorization: Bearer <token>` header.
+Authorization: Bearer <token>
+
+🎨 Styling and Design
+
+The app uses Tailwind-like utility classes (without a full Tailwind dependency).
+Colors and layout styles are defined inline or within reusable components.
+For a consistent global theme, you can extract class names into a shared theme file.
 
 
-## Styling
-The app uses Tailwind-like utility classes. Colors/palette are set inline on components; if you want a global theme, extract class names to a central theme file.
+🧪 Testing the Frontend
+
+You can test the frontend locally after running the backend:
+
+# Run backend on port 8001
+uvicorn main:app --reload --port 8001
+
+# Run frontend on port 3000
+npm start
 
 
+Once both are running, open http://localhost:3000
+ in your browser.
+
+
+📄 License
+
+This project is open-source and available under the MIT License
+.
