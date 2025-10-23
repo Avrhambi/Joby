@@ -30,7 +30,7 @@ View and update personal information and notification preferences via an intuiti
 
 - Jobs Engine: 8002
 
-# 🖥️ Joby Frontend
+# Joby Frontend
 
 A React-based web application that serves as the user interface for the Joby platform.
 It enables users to sign up, log in, manage their profiles, and create job notification rules.
@@ -145,7 +145,7 @@ Once both are running, open http://localhost:3000 in your browser.
 
 
 
-📄 License
+### 📄 License
 
 This project is open-source and available under the MIT License
 .
