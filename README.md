@@ -1,6 +1,6 @@
-# 🧠 Joby – Personalized Job Notification Platform
+# Joby – Personalized Job Notification Platform
 
-## 🌍 Overview
+## Overview
 
 Joby is a full-stack job notification platform that allows users to create, manage, and receive personalized job alerts based on their preferences.
 It consists of three coordinated components:
@@ -38,19 +38,19 @@ The app interacts with the backend API for authentication, data persistence, and
 
 ## Features:
 
-🔐 Authentication: Sign up and login via JWT tokens.
+Authentication: Sign up and login via JWT tokens.
 
-⚙️ Profile Management: Edit name, email, and password.
+Profile Management: Edit name, email, and password.
 
-📬 Job Notifications: Create, edit, and delete job notification rules.
+Job Notifications: Create, edit, and delete job notification rules.
 
-🧭 Routing: Implemented using React Router for seamless navigation.
+Routing: Implemented using React Router for seamless navigation.
 
-✅ Validation: Client-side form validation with backend error handling.
+Validation: Client-side form validation with backend error handling.
 
-🎨 Styling: Tailwind-style utility classes for consistent UI design.
+Styling: Tailwind-style utility classes for consistent UI design.
 
-🌐 Configurable API URL: Uses environment variable REACT_APP_API_URL for backend connection.
+Configurable API URL: Uses environment variable REACT_APP_API_URL for backend connection.
 
 ### ⚙️ Prerequisites
 
@@ -66,7 +66,7 @@ Backend server running at http://localhost:8001 (by default)
 ```bash
 npm install
 ```
-### or
+or
 ```bash
 yarn
 ```
@@ -76,7 +76,7 @@ yarn
 ```bash  
 npm start
 ```
-### or
+or
 ```bash
 yarn start
 ```
@@ -112,14 +112,14 @@ All authenticated requests must include:
 
 Authorization: Bearer <token>
 
-🎨 Styling and Design
+## 🎨 Styling and Design
 
 The app uses Tailwind-like utility classes (without a full Tailwind dependency).
 Colors and layout styles are defined inline or within reusable components.
 For a consistent global theme, you can extract class names into a shared theme file.
 
 
-🧪 Testing the Frontend
+## 🧪 Testing the Frontend
 
 You can test the frontend locally after running the backend:
 
