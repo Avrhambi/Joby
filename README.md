@@ -26,7 +26,9 @@ The platform enables users to:
 ### Main Ports:
 
 **Frontend** 3000
+
 **Backend** 8001
+
 **Jobs Engine** 8002
 
 ### Tech Stack
