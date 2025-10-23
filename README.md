@@ -5,21 +5,21 @@
 Joby is a full-stack job notification platform that allows users to create, manage, and receive personalized job alerts based on their preferences.
 It consists of three coordinated components:
 
-Frontend (React) – The user-facing interface for registration, login, and notification management.
+1. Frontend (React) – The user-facing interface for registration, login, and notification management.
 
-Backend (FastAPI) – The main API that handles authentication, user data, and automated email notifications.
+2. Backend (FastAPI) – The main API that handles authentication, user data, and automated email notifications.
 
-Jobs Engine (FastAPI) – A microservice that scrapes and aggregates job listings from Indeed and LinkedIn.
+3. Jobs Engine (FastAPI) – A microservice that scrapes and aggregates job listings from Indeed and LinkedIn.
 
 The platform enables users to:
 
-Register and log in securely using JWT-based authentication.
+- Register and log in securely using JWT-based authentication.
 
-Define job search rules (e.g., job title, location, frequency).
+- Define job search rules (e.g., job title, location, frequency).
 
-Automatically receive job listings by email daily, weekly, or monthly.
+- Automatically receive job listings by email daily, weekly, or monthly.
 
-View and update personal information and notification preferences via an intuitive React interface.
+- View and update personal information and notification preferences via an intuitive React interface.
 
 
 ### Main Ports:
@@ -38,19 +38,20 @@ The app interacts with the backend API for authentication, data persistence, and
 
 ## Features:
 
-Authentication: Sign up and login via JWT tokens.
+- Authentication: Sign up and login via JWT tokens.
 
-Profile Management: Edit name, email, and password.
+- Profile Management: Edit name, email, and password.
 
-Job Notifications: Create, edit, and delete job notification rules.
+- Job Notifications: Create, edit, and delete job notification rules.
 
-Routing: Implemented using React Router for seamless navigation.
+- Routing: Implemented using React Router for seamless navigation.
 
-Validation: Client-side form validation with backend error handling.
+- Validation: Client-side form validation with backend error handling.
 
-Styling: Tailwind-style utility classes for consistent UI design.
+- Styling: Tailwind-style utility classes for consistent UI design.
 
-Configurable API URL: Uses environment variable REACT_APP_API_URL for backend connection.
+### Configurable API URL: 
+Uses environment variable REACT_APP_API_URL for backend connection.
 
 ### ⚙️ Prerequisites
 
