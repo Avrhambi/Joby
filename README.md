@@ -15,7 +15,7 @@ The platform enables users to:
 
 - View and update personal information and notification preferences via an intuitive React interface.
 
-## Project Structure
+### Project Structure
 
 - **Frontend**    Web client for user authentication, profile management, and job notifications      
 
