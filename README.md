@@ -1,7 +1,6 @@
 # Joby (Frontend)
 
 A React application for creating and managing personalized job notifications.
-
 This frontend was scaffolded with Create React App and uses React Router for navigation. The app expects a backend API (by default at http://localhost:8001) for authentication, user profile, and notification persistence.
 
 ## Features
@@ -46,7 +45,7 @@ Example (Windows PowerShell):
 $env:REACT_APP_API_URL = 'http://localhost:8001'; npm start
 ```
 
-## Expected backend API (assumptions)
+## Expected backend API 
 The frontend expects these endpoints (adjust `src/utils/mockApi.js` if your API differs):
 
 - POST /signup -> { token, user }
