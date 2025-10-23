@@ -93,19 +93,28 @@ Windows PowerShell
 $env:REACT_APP_API_URL = 'http://localhost:8001'; npm start
 ```
 
-### 🌐 Environment Variables
+### Environment Variables
 Variable	Description	Default
 REACT_APP_API_URL	Backend API URL	http://localhost:8001
-🔗 Expected Backend Endpoints
+###  Expected Backend Endpoints
 Method	Endpoint	Description
+
 POST	/signup	Register new user
+
 POST	/login	Authenticate user
+
 GET	/user/me	Retrieve user details
+
 PUT	/user/me	Update user profile
+
 POST	/user/me/password	Change password
+
 GET	/notifications	Fetch all job notifications
+
 POST	/notifications	Create a new notification rule
+
 PUT	/notifications/:id	Update a notification rule
+
 DELETE	/notifications/:id	Delete a notification rule
 
 All authenticated requests must include:
