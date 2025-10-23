@@ -31,7 +31,9 @@ The platform enables users to:
 
 ### Tech Stack
 - Frontend: JavaScript, React, Tailwind CSS
+
 - Backend: Python, FastAPI, PostgreSQL
+
 - Jobs Engine: Python, FastAPI, JobsSpy
 
 # Joby Frontend
@@ -54,8 +56,6 @@ The app interacts with the backend API for authentication, data persistence, and
 
 - Styling: Tailwind-style utility classes for consistent UI design.
 
-### Configurable API URL: 
-Uses environment variable REACT_APP_API_URL for backend connection.
 
 ### Prerequisites
 
@@ -98,9 +98,6 @@ npm run build
 $env:REACT_APP_API_URL = 'http://localhost:8001'; npm start
 ```
 
-#### Environment Variables
-Variable	Description	Default
-REACT_APP_API_URL	Backend API URL	http://localhost:8001
 
 ####  Backend Endpoints
 
