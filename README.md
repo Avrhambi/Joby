@@ -53,7 +53,7 @@ The app interacts with the backend API for authentication, data persistence, and
 ### Configurable API URL: 
 Uses environment variable REACT_APP_API_URL for backend connection.
 
-### ⚙️ Prerequisites
+### Prerequisites
 
 Node.js (>= 14)
 
@@ -89,7 +89,7 @@ npm run build
 
 4️⃣ Set environment variable (optional):
 
-Windows PowerShell
+`Windows PowerShell`
 ```bash
 $env:REACT_APP_API_URL = 'http://localhost:8001'; npm start
 ```
@@ -100,7 +100,7 @@ REACT_APP_API_URL	Backend API URL	http://localhost:8001
 ###  Expected Backend Endpoints
 Method	Endpoint	Description
 
-POST	/signup	Register new user
+`POST`	/signup	Register new user
 
 POST	/login	Authenticate user
 
