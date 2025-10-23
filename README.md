@@ -118,17 +118,17 @@ PUT	/notifications/:id	Update a notification rule
 DELETE	/notifications/:id	Delete a notification rule
 
 All authenticated requests must include:
-
+```bash
 Authorization: Bearer <token>
-
-## 🎨 Styling and Design
+```
+## Styling and Design
 
 The app uses Tailwind-like utility classes (without a full Tailwind dependency).
 Colors and layout styles are defined inline or within reusable components.
 For a consistent global theme, you can extract class names into a shared theme file.
 
 
-## 🧪 Testing the Frontend
+## Testing the Frontend
 
 You can test the frontend locally after running the backend:
 
