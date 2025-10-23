@@ -24,11 +24,11 @@ View and update personal information and notification preferences via an intuiti
 
 ### Main Ports:
 
-Frontend: 3000
+- Frontend: 3000
 
-Backend: 8001
+- Backend: 8001
 
-Jobs Engine: 8002
+- Jobs Engine: 8002
 
 # 🖥️ Joby Frontend
 
@@ -58,7 +58,7 @@ Node.js (>= 14)
 
 npm or yarn
 
-Backend server running at http://localhost:8001 (by default)
+Backend server running at http://localhost:8001 
 
 ##  Quick Start
 
@@ -141,8 +141,7 @@ uvicorn main:app --reload --port 8001
 npm start
 ```
 
-Once both are running, open http://localhost:3000
- in your browser.
+Once both are running, open http://localhost:3000 in your browser.
 
 
 📄 License
