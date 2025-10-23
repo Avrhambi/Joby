@@ -29,7 +29,7 @@ The platform enables users to:
 
 - Jobs Engine: 8002
 
-# Tech Stack
+### Tech Stack
 - Frontend: JavaScript, React, Tailwind CSS
 - Backend: Python, FastAPI, PostgreSQL
 - Jobs Engine: Python, FastAPI, JobsSpy
