@@ -1,6 +1,6 @@
-#🧠 Joby – Personalized Job Notification Platform
+# 🧠 Joby – Personalized Job Notification Platform
 
-#🌍 Overview
+## 🌍 Overview
 
 Joby is a full-stack job notification platform that allows users to create, manage, and receive personalized job alerts based on their preferences.
 It consists of three coordinated components:
@@ -63,22 +63,29 @@ Backend server running at http://localhost:8001 (by default)
 🚀 Quick Start
 
 1️⃣ Install dependencies:
-
+```bash
 npm install
-# or
+```
+## or
+```bash
 yarn
+```
 
 
 2️⃣ Run development server:
 
+```bash  
 npm start
-# or
+```
+## or
+```bash
 yarn start
-
+```
 
 3️⃣ Build for production:
-
+```bash
 npm run build
+```
 
 
 4️⃣ Set environment variable (optional):
@@ -117,10 +124,14 @@ For a consistent global theme, you can extract class names into a shared theme f
 You can test the frontend locally after running the backend:
 
 ## Run backend on port 8001
+```bash
 uvicorn main:app --reload --port 8001
+```
 
 ## Run frontend on port 3000
+```bash
 npm start
+```
 
 
 Once both are running, open http://localhost:3000
